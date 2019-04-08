@@ -1,8 +1,7 @@
-const shuffle = require('lodash.shuffle');
-const generateDeck = require('./lib/deck');
+const {generateDeck, shuffleCards} = require('./lib/deck');
 
 const cards = generateDeck();
-const sample = shuffle(cards).slice(0, 12);
+const sample = shuffleCards(cards).slice(0, 12);
 
 console.log(sample);
 
